@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
-import {  PageLayout } from './shared/layout'
+import HomeLayout from './shared/home'
+import HeaderLayout from './shared/header'
+import SidebarLayout from './shared/sidebar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,7 +15,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-   <PageLayout></PageLayout>
+  
+    <div>
+      <HeaderLayout></HeaderLayout>
+      <HomeLayout></HomeLayout>
+    </div>
+
     </>
   )
 }
