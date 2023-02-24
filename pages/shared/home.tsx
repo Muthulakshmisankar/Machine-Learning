@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import ContentLayout from "./content";
 import SidebarLayout from "./sidebar";
@@ -10,11 +10,11 @@ width: 100vw;
 
 `;
 const HomeLayout = ( ) => {
-
+  const [selectedMenu , setSelectedMenu] = useState();
   return (
   <HomeWrapper>
-  <SidebarLayout></SidebarLayout>
-  <ContentLayout></ContentLayout>
+  <SidebarLayout selectedMenu={selectedMenu} setSelectedMenu={setSelectedMenu}></SidebarLayout>
+  <ContentLayout selectedMenu={selectedMenu}></ContentLayout>
   </HomeWrapper>
   );
 };

@@ -29,9 +29,7 @@ const GlobalStyle = createGlobalStyle`
 
     color: ${({ theme }) => theme.colors.fontprimary};
   }
-  .planetX{
-    overflow: auto;
-  }
+ 
 `;
 
 export default GlobalStyle;
